@@ -2,7 +2,7 @@ import axios from 'axios'
 
 function getAllProducts (callback) {
   axios
-    .get('https://fakestoreapi.com/products')
+    .get('/api/products')
     .then((res) => callback(res.data))
     .catch((error) => console.log(error))
 }
