@@ -5,6 +5,8 @@ import './index.css'
 import HomePage from './pages/home'
 import ErrorPage from './pages/404'
 import ProfilePage from './pages/profile'
+import { Provider } from 'react-redux'
+import store from './redux/store'
 
 const router = createBrowserRouter([
   {
@@ -20,6 +22,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
   </React.StrictMode>,
 )
